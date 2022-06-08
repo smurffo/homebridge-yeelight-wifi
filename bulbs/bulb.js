@@ -73,8 +73,8 @@ class YeeBulb {
   }
 
   set power(state) {
-    callback(null, state);
-    callback(state);
+    this.log('1 ' + state);
+    this.log('2 ' + state);
     this._power = state === 'On' ? 1 : 0;
   }
 
@@ -90,7 +90,7 @@ class YeeBulb {
   }
 
   async setPower(power) {
-    callback(null, power);
+    this.log('3 ' + power);
     if (this.power === power) {
       return Promise.resolve(power);
     }
