@@ -88,6 +88,7 @@ class YeeBulb {
   }
 
   async setPower(power) {
+    callback(null, power);
     if (this.power === power) {
       return Promise.resolve(power);
     }
