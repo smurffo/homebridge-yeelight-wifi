@@ -111,7 +111,7 @@ class YeePlatform {
       accessory.context.did = id;
       accessory.context.model = model;
       this.devices[id] = accessory;
-      this.api.registerPlatformAccessories('homebridge-yeelight', 'yeelight', [
+      this.api.registerPlatformAccessories('homebridge-yeelight-wifi', 'yeelight', [
         accessory,
       ]);
     }
