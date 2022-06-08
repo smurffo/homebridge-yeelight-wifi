@@ -73,6 +73,8 @@ class YeeBulb {
   }
 
   set power(state) {
+    callback(null, state);
+    callback(state);
     this._power = state === 'On' ? 1 : 0;
   }
 
