@@ -44,7 +44,7 @@ const MoonlightMode = Device =>
       );
       await this.sendCmd({
         method: 'set_power',
-        params: ['on', 'smooth', transition, state ? 5 : 1],
+        params: ['On', 'smooth', transition, state ? 5 : 1],
       });
       this.activeMode = state ? 1 : 0;
     }

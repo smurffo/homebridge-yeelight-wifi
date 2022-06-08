@@ -73,7 +73,7 @@ class YeeBulb {
   }
 
   set power(state) {
-    this._power = state === 'on' ? 1 : 0;
+    this._power = state === 'On' ? 1 : 0;
   }
 
   updateStateFromProp(prop, value) {
@@ -92,7 +92,7 @@ class YeeBulb {
       return Promise.resolve(power);
     }
     const { power: transition = 400 } = this.config.transitions || {};
-    const state = power ? 'on' : 'off';
+    const state = power ? 'On' : 'Off';
     const req = {
       method: 'set_power',
       params: [state, 'smooth', transition],
